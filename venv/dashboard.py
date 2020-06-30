@@ -8,6 +8,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # ------------------------------------------------------------------------------
 # Import and clean data (importing csv into pandas)
@@ -46,7 +47,7 @@ app.layout = app.layout = html.Div(
                                          {"label": i, "value": i} for i in df['Position'].unique()],
                                      multi=False,
                                      value='QB',
-                                     style={'width': "60%"}
+                                     style={'width': "45%"}
                                      ),
                         html.Div("Top x by position"),
                         dcc.Input(

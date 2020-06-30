@@ -3,7 +3,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+#extra
 pyenv.cfg
+venv
+*.ptc
+.env
+.DS_Store
+
 
 # C extensions
 *.so
