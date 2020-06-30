@@ -20,6 +20,9 @@ df['Position'] = df['FantPos']
 
 # ------------------------------------------------------------------------------
 # App layout
+
+z = 1
+
 app.layout = app.layout = html.Div(
     [
         html.Br(),
