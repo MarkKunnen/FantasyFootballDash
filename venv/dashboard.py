@@ -20,9 +20,6 @@ df['Position'] = df['FantPos']
 
 # ------------------------------------------------------------------------------
 # App layout
-
-z = 1
-
 app.layout = app.layout = html.Div(
     [
         html.Br(),
@@ -34,7 +31,7 @@ app.layout = app.layout = html.Div(
                     [
                         dcc.Markdown('''
                         &nbsp&nbspLooking at the third quartile and above, we can examine **top tier** players by position.
-                           * RB have a handful of very strong players each season shown by the outliers in these graphs.
+                           * RB have a handful of very strong players each season shown by the outliers in the below boxplot.
                            * WR have far less scarcity when it comes to stronger players.
                            * QB's show a very small gap between the best available and the median.
                            '''),
