@@ -1,1 +1,3 @@
-web:gunicorn dashboard:server
+web: gunicorn dashboard:server
+heroku ps:scale web = 1
+
