@@ -29,6 +29,7 @@ app.layout = app.layout = html.Div(
         dbc.Row(
             [
                 dbc.Col(
+
                     [
                         dcc.Markdown('''
                         &nbsp&nbspLooking at the third quartile and above, we can examine **top tier** players by position.

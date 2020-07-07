@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="215b0cd3-d637-4817-97ad-df54da69d0dd" name="Default Changelist" comment="Updated markdown text regarding boxplot">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Procfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Procfile.txt" afterDir="false" />
-    </list>
+    <list default="true" id="215b0cd3-d637-4817-97ad-df54da69d0dd" name="Default Changelist" comment="Updated markdown text regarding boxplot" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
