@@ -13,7 +13,7 @@ server = app.server
 # ------------------------------------------------------------------------------
 # Import and clean data (importing csv into pandas)
 #https://www.reddit.com/r/fantasyfootball/comments/8y0298/heres_a_spreadsheet_with_10_years_of_fantasy_data/
-df = pd.read_csv("fantasy_football.csv")
+df = pd.read_csv("venv/fantasy_football.csv")
 df.dropna(how='any', inplace=True)
 df['Year'] = df['Year'].astype(str)
 df = df[df['PPR'] != 0]
@@ -78,8 +78,25 @@ def update_bar(position, top_x):
     dff = df_copy.sort_values(by='PPR', ascending = False)
     dff['Year_Name'] = dff['Name'] + " (" + dff['Year'] + ")"
     dff = dff[dff["Position"] == position].iloc[:top_x,:].sort_values(by=['Year', 'PPR'])
-    fig_bar = px.bar(dff, x='PPR', y='Year_Name', color = 'Year')
-    fig_box = px.box(df_copy.sort_values(by='Year'), x='Position', y='PPR', color='Year', hover_data=['Year','Name','PPR'])
+    fig_bar = px.bar(dff, x='PPR',
+                        y='Year_Name',
+                        color = 'Year',
+                        color_discrete_map={
+                             "2014": "#636EFA",
+                             "2015": "#EF553B",
+                             "2016": "#00CC96",
+                             "2017": "#AB63FA",
+                             "2018": "#FFA15A"},
+                     )
+    fig_box = px.box(df_copy.sort_values(by='Year'),
+                        x='Position', y='PPR', color = 'Year',
+                        color_discrete_map={
+                                "2014": "#636EFA",
+                                "2015": "#EF553B",
+                                "2016": "#00CC96",
+                                "2017": "#AB63FA",
+                                "2018": "#FFA15A"},
+                        hover_data=['Year','Name','PPR'])
     return [fig_box, fig_bar]
 
 # ------------------------------------------------------------------------------
